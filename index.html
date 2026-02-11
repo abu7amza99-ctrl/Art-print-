@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Designer Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- خطوط احترافية -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal&family=Amiri&family=Changa&family=Almarai&family=Lateef&family=Reem+Kufi&family=Scheherazade&family=El+Messiri&family=Harmattan&family=Markazi+Text&family=Noto+Kufi+Arabic&family=Noto+Naskh+Arabic&family=Rakkas&family=Mirza&family=Katibeh&family=Gulzar&family=Baloo+Bhaijaan+2&family=Lalezar&family=Mada&family=IBM+Plex+Sans+Arabic&family=Rubik&family=Montserrat&family=Playfair+Display&family=Poppins&family=Roboto&family=Lobster&family=Pacifico&family=Oswald&family=Anton&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="app">
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+<h2>القوالب</h2>
+<div id="templates"></div>
+
+<h2>إضافة نص</h2>
+<textarea id="textInput"></textarea>
+
+<select id="fontSelect"></select>
+<input type="file" id="fontUpload" accept=".ttf,.otf">
+
+<label>لون النص</label>
+<input type="color" id="textColor">
+
+<label>Stroke</label>
+<input type="color" id="strokeColor">
+<input type="range" id="strokeWidth" min="0" max="15">
+
+<label>Opacity</label>
+<input type="range" id="opacityRange" min="0" max="1" step="0.05">
+
+<label>Shadow</label>
+<input type="color" id="shadowColor">
+<input type="range" id="shadowBlur" min="0" max="50">
+
+<button id="addTextBtn">إضافة نص</button>
+
+<hr>
+
+<h2>إضافة صورة</h2>
+<input type="file" id="imageUpload" accept="image/*">
+<button id="addImageBtn">إضافة صورة</button>
+
+<hr>
+
+<h2>المقاسات</h2>
+<input type="number" id="canvasWidth" placeholder="العرض px">
+<input type="number" id="canvasHeight" placeholder="الارتفاع px">
+<button id="resizeCanvasBtn">تطبيق</button>
+
+<hr>
+
+<h2>الطبقات</h2>
+<ul id="layersPanel"></ul>
+
+<hr>
+
+<button id="exportPNG">تصدير PNG</button>
+<button id="saveProject">حفظ مشروع</button>
+<input type="file" id="loadProject">
+
+</div>
+
+<!-- Workspace -->
+<div class="workspace">
+<div id="canvas"></div>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
